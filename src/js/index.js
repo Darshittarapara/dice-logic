@@ -8,8 +8,8 @@ const randomDiceNumberTwoDigit = document.querySelector(".randomDiceNumberTwoDig
 const DICE_NUMBERS = [1, 2, 3, 4, 5, 6];
 let currentDiceOneNumber = 6;
 window.addEventListener('load', () => {
-    diceImgOne.src = `../../images/${currentDiceOneNumber}.png`;
-    diceImgTwo.src = `../../images/${currentDiceOneNumber}.png`;
+    diceImgOne.src = `./assets/images/${currentDiceOneNumber}.png`;
+    diceImgTwo.src = `./assets/images/${currentDiceOneNumber}.png`;
 });
 
 /**
@@ -27,7 +27,7 @@ const generateRandomDiceNumber = () => {
 const changeDiceOneContainer = () => {
     const diceNumber = generateRandomDiceNumber();
     diceImgOne.classList.toggle("rotateDiceOne")
-    diceImgOne.src = `../../images/${diceNumber}.png`;
+    diceImgOne.src = `./assets/images/${diceNumber}.png`;
     randomDiceNumberOneDigit.innerHTML = `Dice one number ${diceNumber}`
     diceImgOne.disabled = true
 }
@@ -38,7 +38,7 @@ const changeDiceOneContainer = () => {
 const changeDiceTwoContainer = () => {
     const diceNumber = generateRandomDiceNumber();
     diceImgTwo.classList.toggle("rotateDiceOne");
-    diceImgTwo.src = `../../images/${diceNumber}.png`;
+    diceImgTwo.src = `./assets/images/${diceNumber}.png`;
     randomDiceNumberTwoDigit.innerHTML = `Dice two number ${diceNumber}`
     diceImgTwo.disabled = true
 }
